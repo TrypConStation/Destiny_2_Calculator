@@ -72,23 +72,25 @@ public class Destiny_2_Calculator {
             FinalRange = Bad;
         }
         // Stability
-        System.out.println("Stability Value: ");
-        double stability = input.nextDouble();
-        double FinalStability = stability/10;
-        if (FinalStability >= 8) {
+        double FinalStability;
+        if (type.equals("Sniper Rifle") || type.equals("Shotgun") || type.equals("Slug Shotgun") || (type.equals("Grenade Launcher") && (RPM == 90 || RPM == 72))) {
             FinalStability = HOLD_MY_BEER;
         }
-        else if (FinalStability >= 6) {
-            FinalStability = Amazing;
-        }
-        else if (FinalStability >= 5.5) {
-            FinalStability = Great;
-        }
-        else if (FinalStability >= 4.5) {
-            FinalStability = Good;
-        }
         else {
-            FinalStability = Bad;
+            System.out.println("Stability Value: ");
+            double stability = input.nextDouble();
+            FinalStability = stability / 10;
+            if (FinalStability >= 8) {
+                FinalStability = HOLD_MY_BEER;
+            } else if (FinalStability >= 6) {
+                FinalStability = Amazing;
+            } else if (FinalStability >= 5.5) {
+                FinalStability = Great;
+            } else if (FinalStability >= 4.5) {
+                FinalStability = Good;
+            } else {
+                FinalStability = Bad;
+            }
         }
         // Handling
         System.out.println("Handling Value: ");
