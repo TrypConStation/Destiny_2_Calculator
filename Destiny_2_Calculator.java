@@ -11,7 +11,6 @@ public class Destiny_2_Calculator {
         {
             System.out.println("Choose a function: \n1: Weapon Calculation");
             int res = input.nextInt();
-            input.nextLine();
             Weapon_Consistancy();
             input.nextLine();
             System.out.println("Preform another calculation? (y/n)");
@@ -24,12 +23,9 @@ public class Destiny_2_Calculator {
     // Weapon Stats (GENERIC FORMULA TEST NOT OFFICIAL)
     public static double Weapon_Consistancy()
     {
-        double impact = 0;
-        weapon [] weapons = new weapon [1];
+        weapon [] weapons = new weapon [44];
         populateArray(weapons);
-        // Type
-        System.out.println("Enter the type of Weapon (Slug Shotgun, Sniper Rifle, Auto Rifle, etc.)");
-        String type = input.nextLine();
+        System.out.println(weapons[0].name + " " + weapons[0].rpm + " " + weapons[0].impact);
         System.out.println("Provide the Weapon's Numerical Values:");
         // Bad or Good
         int HOLD_MY_BEER = 4;
@@ -37,21 +33,9 @@ public class Destiny_2_Calculator {
         int Great = 2;
         int Good = 1;
         int Bad = 0;
-        // Rounds Per Minute
-        System.out.println("Rounds Per Minute Value: ");
-        double RPM = input.nextDouble();
         // Impact
-        boolean found = false;
-        for (int i = 0; i < weapons.length; i++){
-            if (weapons[i].name.equals(type) && weapons[i].rpm == RPM) {
-                impact = weapons[i].impact;
-                found = true;
-            }
-            else if (found == false && i == weapons.length-1) {
-                System.out.println("Weapon was not in database.");
-                System.exit(0);
-            }
-        }
+        System.out.println("Impact Value: ");
+        double impact = input.nextDouble();
         // Range
         System.out.println("Range Value: ");
         double range = input.nextDouble();
@@ -147,6 +131,9 @@ public class Destiny_2_Calculator {
         else {
             FinalRecoil = Bad;
         }
+        // Rounds Per Minute
+        System.out.println("Rounds Per Minute Value: ");
+        double RPM = input.nextDouble();
         // Damage Per Second
         double DPS = impact * RPM / 60;
         System.out.println("Your Optimal Damage Per Second is: ");
@@ -159,7 +146,116 @@ public class Destiny_2_Calculator {
     }
 
     public static weapon [] populateArray(weapon [] weps) {
-        weps[0] = new weapon ("Hand Cannon", 100, 92);
+        //Cleared = Values are ready
+        //Not Cleared = Impact Value is incorrect
+
+           //I found a site for precision modifiers but I am unsure if they are correct.
+           //I can check with what I have so far but still unsure.
+           //I think using in game data that is hard coded would be better. 
+
+
+
+//Hand Cannons: Cleared
+//Total: 4 
+weps[0] = new weapon ("Hand Cannon", 110, 92); 
+weps[1] = new weapon ("Hand Cannon", 140, 70);
+weps[2] = new weapon ("Hand Cannon", 150, 68);
+weps[3] = new weapon ("Hand Cannon", 180, 57);
+
+//Auto Rifles: Cleared
+//Total: 4 
+weps[4] = new weapon ("Auto Rifle", 360, 35);
+weps[5] = new weapon ("Auto Rifle", 450, 27);
+weps[6] = new weapon ("Auto Rifle", 600, 25);
+weps[7] = new weapon ("Auto Rifle", 720, 20);
+
+//Pulse Rifles: Cleared
+//Total: 4 
+weps[8] = new weapon ("Pulse Rifle", 340, 34);
+weps[9] = new weapon ("Pulse Rifle", 390, 31);
+weps[10] = new weapon ("Pulse Rifle", 450, 25);
+weps[11] = new weapon ("Pulse Rifle", 540, 24);
+
+//Scout Rifles: Cleared 
+//Total: 4
+wep[12] = new weapon ("Scout Rifle", 150, 68);
+wep[13] = new weapon ("Scout Rifle", 180, 38);
+wep[14] = new weapon ("Scout Rifle", 200, 54);
+wep[15] = new weapon ("Scout Rifle", 260, 47);
+
+//Submachine Guns: Cleared (-1 archetype.)
+//Total: 3
+wep[16] = new weapon ("Submachine Gun", 600, 23);
+wep[17] = new weapon ("Submachine Gun", 750, 22);
+wep[18] = new weapon ("Submachine Gun", 900, 17);
+
+//Sidearms: Cleared (+1 Archetype)
+//We may need a new formula for 491 (3 Burst Side Arms) 
+// Total: 5
+wep[19] = new weapon ("Sidearm", 260, 57);
+wep[20] = new weapon ("Sidearm", 300, 51);
+wep[21] = new weapon ("Sidearm", 360, 44);
+wep[22] = new weapon ("Sidearm", 450, 36);
+wep[23] = new weapon ("Sidearm", 491, 33); //33*3 = total damage per burst
+
+//Sniper Rifles: Cleared (-1 Archetype) 
+//Total: 3
+wep[24] = new weapon ("Sniper Rifle", 72, 474);
+wep[25] = new weapon ("Sniper Rifle", 90, 387);
+wep[26] = new weapon ("Sniper Rifle", 140, 293);
+
+//Linear Fusion Rifles: Cleared  (-1 Archetype)
+//Total: 3
+wep[27] = new weapon ("Linear Fusion Rifle", 1024, 901);
+wep[28] = new weapon ("Linear Fusion Rifle", 533, 497); //THERE ARE DIFFERENT CHARGE TIMES DUE TO GUN PERKS 
+wep[29] = new weapon ("Linear Fusion Rifle", 633, 542);
+
+//Slug Shotguns: Cleared (-2 Archetype)
+//Total: 2
+wep[30] = new weapon ("Slug Shotgun", 65, 264);
+wep[31] = new weapon ("Slug Shotgun", 70, 264);
+
+
+//Shotguns: Cleared 
+//Total: 4
+wep[32] = new weapon ("Shotgun", 55, 25); //25*11= total damage per pellete spread
+wep[33] = new weapon ("Shotgun", 60, 23); //23*11 = total damage per pellete spread
+wep[34] = new weapon ("Shotgun", 80,19 ); //19*11 = total damage per pellete spread
+wep[35] = new weapon ("Shotgun", 140, 17); //17*11 = total damage per pellete spread
+
+//Bows: Not Cleared (Test Wish Ender) (-1 Archetype)
+//Total: 3+ (?)_(for now 2+ due to Draw Time Inconsist.)
+//Create Formula for Draw Speed -> Impact
+wep[36] = new weapon ("Bow", 576, 138);
+wep[37] = new weapon ("Bow", 612, 151);
+wep[38] = new weapon ("Bow", 756, 156);
+
+//Fusion Rifles: Not Cleared (Gather Data) (? Archetypes/Charge Times)
+//Total: 3-4 Frames (Use 3 Blues, One Purple) 
+//Create Formula for Charge time -> Impact
+
+//Trace Rifles: Cleared (-1 Archetypes)
+Total: 3 (all are 1000 RPM, so we took average of 3 damage variations due to Exotic perks)
+wep[39] = new weapon ("Trace Rifle", 1000, 18);
+
+//Rocket Launcher: Cleared (-1 Archetype)
+Total: 3
+wep[40] = new weapon ("Rocket Launcher", 10, 300);
+wep[41] = new weapon ("Rocket Launcher", 15, 300);
+wep[42] = new weapon ("Rocket Launcher", 20, 300);
+
+//Machine Gun: Cleared (-1 Archetype)
+Total: 3
+wep[43] = new weapon ("Machine Gun", 450, 41);
+wep[44] = new weapon ("Machine Gun", 360, 48);
+wep[45] = new weapon ("Machine Gun", 900, 24);
+
+//Grenade Launcher: Cleared 
+Total: 4
+wep[46] = new weapon ("Grenade Launcher", 72, 158); // The on hit damage = 28 + Splash damage (130) = 158
+wep[47] = new weapon ("Grenade Launcher", 90, 182); 
+wep[48] = new weapon ("Grenade Launcher", 120, 226);
+wep[49] = new weapon ("Grenade Launcher", 150, 174); //The on hit damage = 72 + Splash damage (153) = 174
         return weps;
     }
 
