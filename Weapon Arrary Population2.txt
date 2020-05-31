@@ -64,7 +64,7 @@ wep[27] = new weapon ("Linear Fusion Rifle", 1024, 901);
 wep[28] = new weapon ("Linear Fusion Rifle", 533, 497); //THERE ARE DIFFERENT CHARGE TIMES DUE TO GUN PERKS 
 wep[29] = new weapon ("Linear Fusion Rifle", 633, 542);
 
-//Slug Shotguns: Cleared 
+//Slug Shotguns: Cleared (-2 Archetype)
 //Total: 2
 wep[30] = new weapon ("Slug Shotgun", 65, 264);
 wep[31] = new weapon ("Slug Shotgun", 70, 264);
@@ -72,12 +72,43 @@ wep[31] = new weapon ("Slug Shotgun", 70, 264);
 
 //Shotguns: Cleared 
 //Total: 4
-wep[32] = new weapon ("Shotgun", 55, 19); //19*11= total damage per pellete spread
-wep[33] = new weapon ("Shotgun", 60, ); 
-wep[34] = new weapon ("Shotgun", 80, 264);
-wep[35] = new weapon ("Shotgun", 140, 264);
+wep[32] = new weapon ("Shotgun", 55, 25); //25*11= total damage per pellete spread
+wep[33] = new weapon ("Shotgun", 60, 23); //23*11 = total damage per pellete spread
+wep[34] = new weapon ("Shotgun", 80,19 ); //19*11 = total damage per pellete spread
+wep[35] = new weapon ("Shotgun", 140, 17); //17*11 = total damage per pellete spread
 
+//Bows: Not Cleared (Test Wish Ender) (-1 Archetype)
+//Total: 3+ (?)_(for now 2+ due to Draw Time Inconsist.)
+//Create Formula for Draw Speed -> Impact
+wep[36] = new weapon ("Bow", 576, 138);
+wep[37] = new weapon ("Bow", 612, 151);
+wep[38] = new weapon ("Bow", 756, 156);
 
+//Fusion Rifles: Not Cleared (Gather Data) (? Archetypes/Charge Times)
+//Total: 3-4 Frames (Use 3 Blues, One Purple) 
+//Create Formula for Charge time -> Impact
 
+//Trace Rifles: Cleared (-1 Archetypes)
+Total: 3 (all are 1000 RPM, so we took average of 3 damage variations due to Exotic perks)
+wep[39] = new weapon ("Trace Rifle", 1000, 18);
+
+//Rocket Launcher: Cleared (-1 Archetype)
+Total: 3
+wep[40] = new weapon ("Rocket Launcher", 10, 300);
+wep[41] = new weapon ("Rocket Launcher", 15, 300);
+wep[42] = new weapon ("Rocket Launcher", 20, 300);
+
+//Machine Gun: Cleared (-1 Archetype)
+Total: 3
+wep[43] = new weapon ("Machine Gun", 450, 41);
+wep[44] = new weapon ("Machine Gun", 360, 48);
+wep[45] = new weapon ("Machine Gun", 900, 24);
+
+//Grenade Launcher: Cleared 
+Total: 4
+wep[46] = new weapon ("Grenade Launcher", 72, 158); // The on hit damage = 28 + Splash damage (130) = 158
+wep[47] = new weapon ("Grenade Launcher", 90, 182); 
+wep[48] = new weapon ("Grenade Launcher", 120, 226);
+wep[49] = new weapon ("Grenade Launcher", 150, 174); //The on hit damage = 72 + Splash damage (153) = 174
 
 
