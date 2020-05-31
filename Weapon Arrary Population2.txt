@@ -1,0 +1,71 @@
+HEY TYPE IN THOSE NUMBERS
+
+//Cleared = Values are ready
+//Not Cleared = Impact Value is incorrect
+
+//I found a site for precision modifiers but I am unsure if they are correct.
+//I can check with what I have so far but still unsure.
+//I think using in game data that is hard coded would be better. 
+
+
+
+//Hand Cannons: Cleared
+//Total: 4 
+weps[0] = new weapon ("Hand Cannon", 110, 92); 
+weps[1] = new weapon ("Hand Cannon", 140, 70);
+weps[2] = new weapon ("Hand Cannon", 150, 68);
+weps[3] = new weapon ("Hand Cannon", 180, 57);
+
+//Auto Rifles: Cleared
+//Total: 4 
+weps[4] = new weapon ("Auto Rifle", 360, 35);
+weps[5] = new weapon ("Auto Rifle", 450, 27);
+weps[6] = new weapon ("Auto Rifle", 600, 25);
+weps[7] = new weapon ("Auto Rifle", 720, 20);
+
+//Pulse Rifles: Cleared
+//Total: 4 
+weps[8] = new weapon ("Pulse Rifle", 340, 34);
+weps[9] = new weapon ("Pulse Rifle", 390, 31);
+weps[10] = new weapon ("Pulse Rifle", 450, 25);
+weps[11] = new weapon ("Pulse Rifle", 540, 24);
+
+//Scout Rifles: Not Cleared 
+//Total: 4
+wep[12] = new weapon ("Scout Rifle", 150, 67);
+wep[13] = new weapon ("Scout Rifle", 180, 62);
+wep[14] = new weapon ("Scout Rifle", 200, 60);
+wep[15] = new weapon ("Scout Rifle", 260, 45);
+
+//Submachine Guns: Not Cleared (-1 archetype.)
+//Total: 3
+wep[16] = new weapon ("Submachine Gun", 600, 25);
+wep[17] = new weapon ("Submachine Gun", 750, 23);
+wep[18] = new weapon ("Submachine Gun", 900, 15);
+
+//Sidearms: Not Cleared (+1 Archetype)
+//We may need a new formula for 491 (3 Burst Side Arms) 
+// Total: 5
+wep[19] = new weapon ("Sidearm", 260, 51);
+wep[20] = new weapon ("Sidearm", 300, 49);
+wep[21] = new weapon ("Sidearm", 360, 43);
+wep[22] = new weapon ("Sidearm", 450, 35);
+wep[23] = new weapon ("Sidearm", 491, 75);
+
+//Sniper Rifles: Not Cleared (-1 Archetype) 
+//Total: 3
+wep[24] = new weapon ("Sniper Rifle", 72, 90);
+wep[25] = new weapon ("Sniper Rifle", 90, 70);
+wep[26] = new weapon ("Sniper Rifle", 140, 55);
+
+//Linear Fusion Rifles: Not Cleared  (-1 Archetype)
+//Total: 3
+wep[27] = new weapon ("Linear Fusion Rifle", 1024, 41);
+wep[28] = new weapon ("Linear Fusion Rifle", 533, 41);
+wep[29] = new weapon ("Linear Fusion Rifle", 633, 41);
+
+//Shotguns: Not Cleared 
+//Total: 
+wep[30] = new weapon
+wep[31] = new weapon
+
