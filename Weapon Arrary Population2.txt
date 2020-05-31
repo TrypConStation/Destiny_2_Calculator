@@ -30,42 +30,54 @@ weps[9] = new weapon ("Pulse Rifle", 390, 31);
 weps[10] = new weapon ("Pulse Rifle", 450, 25);
 weps[11] = new weapon ("Pulse Rifle", 540, 24);
 
-//Scout Rifles: Not Cleared 
+//Scout Rifles: Cleared 
 //Total: 4
-wep[12] = new weapon ("Scout Rifle", 150, 67);
-wep[13] = new weapon ("Scout Rifle", 180, 62);
-wep[14] = new weapon ("Scout Rifle", 200, 60);
-wep[15] = new weapon ("Scout Rifle", 260, 45);
+wep[12] = new weapon ("Scout Rifle", 150, 68);
+wep[13] = new weapon ("Scout Rifle", 180, 38);
+wep[14] = new weapon ("Scout Rifle", 200, 54);
+wep[15] = new weapon ("Scout Rifle", 260, 47);
 
-//Submachine Guns: Not Cleared (-1 archetype.)
+//Submachine Guns: Cleared (-1 archetype.)
 //Total: 3
-wep[16] = new weapon ("Submachine Gun", 600, 25);
-wep[17] = new weapon ("Submachine Gun", 750, 23);
-wep[18] = new weapon ("Submachine Gun", 900, 15);
+wep[16] = new weapon ("Submachine Gun", 600, 23);
+wep[17] = new weapon ("Submachine Gun", 750, 22);
+wep[18] = new weapon ("Submachine Gun", 900, 17);
 
-//Sidearms: Not Cleared (+1 Archetype)
+//Sidearms: Cleared (+1 Archetype)
 //We may need a new formula for 491 (3 Burst Side Arms) 
 // Total: 5
-wep[19] = new weapon ("Sidearm", 260, 51);
-wep[20] = new weapon ("Sidearm", 300, 49);
-wep[21] = new weapon ("Sidearm", 360, 43);
-wep[22] = new weapon ("Sidearm", 450, 35);
-wep[23] = new weapon ("Sidearm", 491, 75);
+wep[19] = new weapon ("Sidearm", 260, 57);
+wep[20] = new weapon ("Sidearm", 300, 51);
+wep[21] = new weapon ("Sidearm", 360, 44);
+wep[22] = new weapon ("Sidearm", 450, 36);
+wep[23] = new weapon ("Sidearm", 491, 33); //33*3 = total damage per burst
 
-//Sniper Rifles: Not Cleared (-1 Archetype) 
+//Sniper Rifles: Cleared (-1 Archetype) 
 //Total: 3
-wep[24] = new weapon ("Sniper Rifle", 72, 90);
-wep[25] = new weapon ("Sniper Rifle", 90, 70);
-wep[26] = new weapon ("Sniper Rifle", 140, 55);
+wep[24] = new weapon ("Sniper Rifle", 72, 474);
+wep[25] = new weapon ("Sniper Rifle", 90, 387);
+wep[26] = new weapon ("Sniper Rifle", 140, 293);
 
-//Linear Fusion Rifles: Not Cleared  (-1 Archetype)
+//Linear Fusion Rifles: Cleared  (-1 Archetype)
 //Total: 3
-wep[27] = new weapon ("Linear Fusion Rifle", 1024, 41);
-wep[28] = new weapon ("Linear Fusion Rifle", 533, 41);
-wep[29] = new weapon ("Linear Fusion Rifle", 633, 41);
+wep[27] = new weapon ("Linear Fusion Rifle", 1024, 901);
+wep[28] = new weapon ("Linear Fusion Rifle", 533, 497); //THERE ARE DIFFERENT CHARGE TIMES DUE TO GUN PERKS 
+wep[29] = new weapon ("Linear Fusion Rifle", 633, 542);
 
-//Shotguns: Not Cleared 
-//Total: 
-wep[30] = new weapon
-wep[31] = new weapon
+//Slug Shotguns: Cleared 
+//Total: 2
+wep[30] = new weapon ("Slug Shotgun", 65, 264);
+wep[31] = new weapon ("Slug Shotgun", 70, 264);
+
+
+//Shotguns: Cleared 
+//Total: 4
+wep[32] = new weapon ("Shotgun", 55, 19); //19*11= total damage per pellete spread
+wep[33] = new weapon ("Shotgun", 60, ); 
+wep[34] = new weapon ("Shotgun", 80, 264);
+wep[35] = new weapon ("Shotgun", 140, 264);
+
+
+
+
 
