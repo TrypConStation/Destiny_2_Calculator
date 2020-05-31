@@ -11,6 +11,7 @@ public class Destiny_2_Calculator {
         {
             System.out.println("Choose a function: \n1: Weapon Calculation");
             int res = input.nextInt();
+            input.nextLine();
             Weapon_Consistancy();
             input.nextLine();
             System.out.println("Preform another calculation? (y/n)");
@@ -23,9 +24,12 @@ public class Destiny_2_Calculator {
     // Weapon Stats (GENERIC FORMULA TEST NOT OFFICIAL)
     public static double Weapon_Consistancy()
     {
-        weapon [] weapons = new weapon [44];
+        double impact = 0;
+        weapon [] weapons = new weapon [1];
         populateArray(weapons);
-        System.out.println(weapons[0].name + " " + weapons[0].rpm + " " + weapons[0].impact);
+        // Type
+        System.out.println("Enter the type of Weapon (Slug Shotgun, Sniper Rifle, Auto Rifle, etc.)");
+        String type = input.nextLine();
         System.out.println("Provide the Weapon's Numerical Values:");
         // Bad or Good
         int HOLD_MY_BEER = 4;
@@ -33,9 +37,21 @@ public class Destiny_2_Calculator {
         int Great = 2;
         int Good = 1;
         int Bad = 0;
+        // Rounds Per Minute
+        System.out.println("Rounds Per Minute Value: ");
+        double RPM = input.nextDouble();
         // Impact
-        System.out.println("Impact Value: ");
-        double impact = input.nextDouble();
+        boolean found = false;
+        for (int i = 0; i < weapons.length; i++){
+            if (weapons[i].name.equals(type) && weapons[i].rpm == RPM) {
+                impact = weapons[i].impact;
+                found = true;
+            }
+            else if (found == false && i == weapons.length-1) {
+                System.out.println("Weapon was not in database.");
+                System.exit(0);
+            }
+        }
         // Range
         System.out.println("Range Value: ");
         double range = input.nextDouble();
@@ -131,9 +147,6 @@ public class Destiny_2_Calculator {
         else {
             FinalRecoil = Bad;
         }
-        // Rounds Per Minute
-        System.out.println("Rounds Per Minute Value: ");
-        double RPM = input.nextDouble();
         // Damage Per Second
         double DPS = impact * RPM / 60;
         System.out.println("Your Optimal Damage Per Second is: ");
