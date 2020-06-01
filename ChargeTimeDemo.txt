@@ -1,0 +1,56 @@
+/* Charge and Draw time methods 
+
+Charge Time = Fusion Rifles 
+
+Draw Time = Bow strings draw 
+
+Fusions: 
+1. 820: 48*7
+2. 740: 39*7
+3. 660: 38*7
+3. 580: 36*7
+
+
+Bows:
+
+0. 820: 130+30 (WISH ENDER SPECIFIC)
+1. 720: 156
+2. 648: 151
+3. 612: 151 (Stag)
+4. 540: 138
+
+*/
+
+ weps[39] = new weapon ("Fusion Rifles", 820, 48*7);
+
+
+if (chargeTime <= 820 || chargeTime > 820)
+
+impact = 48*7;
+
+ weps[40] = new weapon ("Fusion Rifles", 740, 39*7);
+
+if (chargeTime <= 740 && < 820)
+
+impact = 39*7;
+
+ weps[41] = new weapon ("Fusion Rifles", 660, 38*7);
+
+if (chargeTime <= 660 && < 740)
+
+impact = 38*7;
+
+ weps[42] = new weapon ("Fusion Rifles", 580, 36*7);
+
+if (chargeTime <= 580 && < 660)
+
+impact = 36*7;
+
+
+charge time of 530 -> 580 
+
+/* 
+
+if (chargeTime >= 580 && < 660)
+
+impact = 36*7;
